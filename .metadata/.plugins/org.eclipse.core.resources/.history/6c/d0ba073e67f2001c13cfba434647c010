@@ -1,0 +1,8 @@
+package com.maddogspp.entities;
+
+public class Pao extends Produto{
+
+	private String tipo;
+	
+	
+}

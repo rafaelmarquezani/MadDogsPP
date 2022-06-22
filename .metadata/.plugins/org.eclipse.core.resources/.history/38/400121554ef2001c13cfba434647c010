@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package services;
+
+/**
+ * @author rmarquezani
+ *
+ */
+public class ProdutoService {
+
+}
