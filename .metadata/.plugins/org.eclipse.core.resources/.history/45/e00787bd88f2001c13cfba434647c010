@@ -1,0 +1,5 @@
+package com.maddogspp.repository;
+
+public class ProdutoRepository {
+
+}
