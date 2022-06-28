@@ -1,8 +1,21 @@
 package com.maddogspp.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class Cliente {
 
@@ -22,5 +35,9 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+    @JsonIgnore
+    @OneToMany( mappedBy = "cliente" , fetch = FetchType.LAZY )
+    private Set<Pedido> pedidos;
 
 }

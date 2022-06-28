@@ -1,0 +1,18 @@
+package com.maddogspp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.maddogspp.entities.Produto;
+import com.maddogspp.repository.ProdutoRepository;
+
+@SpringBootApplication
+public class MadDogsPpApplication {
+
+
+
+}
+		
+

@@ -7,7 +7,6 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @PrimaryKeyJoinColumn(name="idProduto")
 public class Pao extends Produto{
 
-
 	private String tipo;
 
 	public String getTipo() {

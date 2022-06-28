@@ -1,0 +1,28 @@
+package com.maddogspp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.maddogspp.entities.Produto;
+import com.maddogspp.repository.ProdutoRepository;
+
+@SpringBootApplication
+public class MadDogsPpApplication {
+
+		@Bean
+	    public CommandLineRunner init(@Autowired ProdutoRepository produtos){
+	        return args -> {
+	            System.out.println("Salvando clientes");
+	            produtos.save(new Produto());
+	            produtos.save(new Produto("Arroz"));
+
+	            boolean existe = produtos.existsByNome("Dougllas");
+	            System.out.println("existe um cliente com o nome Dougllas? " + existe);
+
+
+	        }
+	    }
+
+}

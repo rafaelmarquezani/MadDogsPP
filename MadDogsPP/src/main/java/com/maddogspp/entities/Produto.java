@@ -1,7 +1,5 @@
 package com.maddogspp.entities;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,9 +7,16 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Produto implements Serializable{
+public class Produto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +26,7 @@ public class Produto implements Serializable{
 	private int quantidade;
 	private String descricao;
 	
+
 	public int getIdProduto() {
 		return idProduto;
 	}
